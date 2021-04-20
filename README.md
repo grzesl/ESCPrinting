@@ -6,7 +6,7 @@ More details are available on the website: [link](https://glpro.pl/virtual_therm
 
 ![](https://github.com/grzesl/ESCPrinting/raw/master/ESCPrinting/logo_b%26w.png)
 
-#Supported commands 
+# Supported commands 
 
 - LF,
 - RS,
@@ -25,7 +25,7 @@ More details are available on the website: [link](https://glpro.pl/virtual_therm
   - '@':
   - GS 'V':
   
-#License
+# License
   
   Copyright (c) 2021 Grzegorz Leśniak
 
