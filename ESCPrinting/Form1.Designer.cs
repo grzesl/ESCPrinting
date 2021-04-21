@@ -65,6 +65,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonTestPrintout = new System.Windows.Forms.Button();
             this.cbAppendLF = new System.Windows.Forms.CheckBox();
+            this.buttonSendQRCode = new System.Windows.Forms.Button();
+            this.buttonClearQrcode = new System.Windows.Forms.Button();
+            this.textBoxQRcode = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonSendBarcode = new System.Windows.Forms.Button();
+            this.buttonClearBarcode = new System.Windows.Forms.Button();
+            this.textBoxBarcode = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -381,14 +389,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Location = new System.Drawing.Point(9, 345);
+            this.panel2.Location = new System.Drawing.Point(9, 424);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 2);
             this.panel2.TabIndex = 33;
             // 
             // buttonTestPrintout
             // 
-            this.buttonTestPrintout.Location = new System.Drawing.Point(406, 353);
+            this.buttonTestPrintout.Location = new System.Drawing.Point(406, 432);
             this.buttonTestPrintout.Name = "buttonTestPrintout";
             this.buttonTestPrintout.Size = new System.Drawing.Size(75, 23);
             this.buttonTestPrintout.TabIndex = 34;
@@ -408,11 +416,91 @@
             this.cbAppendLF.Text = "LF";
             this.cbAppendLF.UseVisualStyleBackColor = true;
             // 
+            // buttonSendQRCode
+            // 
+            this.buttonSendQRCode.Location = new System.Drawing.Point(406, 342);
+            this.buttonSendQRCode.Name = "buttonSendQRCode";
+            this.buttonSendQRCode.Size = new System.Drawing.Size(75, 23);
+            this.buttonSendQRCode.TabIndex = 39;
+            this.buttonSendQRCode.Text = "Send";
+            this.buttonSendQRCode.UseVisualStyleBackColor = true;
+            this.buttonSendQRCode.Click += new System.EventHandler(this.buttonSendQRCode_Click);
+            // 
+            // buttonClearQrcode
+            // 
+            this.buttonClearQrcode.Location = new System.Drawing.Point(58, 343);
+            this.buttonClearQrcode.Name = "buttonClearQrcode";
+            this.buttonClearQrcode.Size = new System.Drawing.Size(26, 23);
+            this.buttonClearQrcode.TabIndex = 38;
+            this.buttonClearQrcode.Text = "X";
+            this.buttonClearQrcode.UseVisualStyleBackColor = true;
+            this.buttonClearQrcode.Click += new System.EventHandler(this.buttonClearQrcode_Click);
+            // 
+            // textBoxQRcode
+            // 
+            this.textBoxQRcode.Location = new System.Drawing.Point(90, 345);
+            this.textBoxQRcode.Name = "textBoxQRcode";
+            this.textBoxQRcode.Size = new System.Drawing.Size(255, 20);
+            this.textBoxQRcode.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 348);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "QRCode:";
+            // 
+            // buttonSendBarcode
+            // 
+            this.buttonSendBarcode.Location = new System.Drawing.Point(406, 369);
+            this.buttonSendBarcode.Name = "buttonSendBarcode";
+            this.buttonSendBarcode.Size = new System.Drawing.Size(75, 23);
+            this.buttonSendBarcode.TabIndex = 43;
+            this.buttonSendBarcode.Text = "Send";
+            this.buttonSendBarcode.UseVisualStyleBackColor = true;
+            this.buttonSendBarcode.Click += new System.EventHandler(this.buttonSendBarcode_Click);
+            // 
+            // buttonClearBarcode
+            // 
+            this.buttonClearBarcode.Location = new System.Drawing.Point(58, 370);
+            this.buttonClearBarcode.Name = "buttonClearBarcode";
+            this.buttonClearBarcode.Size = new System.Drawing.Size(26, 23);
+            this.buttonClearBarcode.TabIndex = 42;
+            this.buttonClearBarcode.Text = "X";
+            this.buttonClearBarcode.UseVisualStyleBackColor = true;
+            this.buttonClearBarcode.Click += new System.EventHandler(this.buttonClearBarcode_Click);
+            // 
+            // textBoxBarcode
+            // 
+            this.textBoxBarcode.Location = new System.Drawing.Point(90, 372);
+            this.textBoxBarcode.Name = "textBoxBarcode";
+            this.textBoxBarcode.Size = new System.Drawing.Size(255, 20);
+            this.textBoxBarcode.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 375);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Barcode:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 385);
+            this.ClientSize = new System.Drawing.Size(529, 467);
+            this.Controls.Add(this.buttonSendBarcode);
+            this.Controls.Add(this.buttonClearBarcode);
+            this.Controls.Add(this.textBoxBarcode);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonSendQRCode);
+            this.Controls.Add(this.buttonClearQrcode);
+            this.Controls.Add(this.textBoxQRcode);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbAppendLF);
             this.Controls.Add(this.buttonTestPrintout);
             this.Controls.Add(this.panel2);
@@ -451,7 +539,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "ESCPrinting Test v.1.05";
+            this.Text = "ESCPrinting Test v.1.06";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -496,6 +584,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonTestPrintout;
         private System.Windows.Forms.CheckBox cbAppendLF;
+        private System.Windows.Forms.Button buttonSendQRCode;
+        private System.Windows.Forms.Button buttonClearQrcode;
+        private System.Windows.Forms.TextBox textBoxQRcode;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonSendBarcode;
+        private System.Windows.Forms.Button buttonClearBarcode;
+        private System.Windows.Forms.TextBox textBoxBarcode;
+        private System.Windows.Forms.Label label7;
     }
 }
 

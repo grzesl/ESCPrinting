@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="logo_b&amp;w.ico" />
     <Content Include="logo_b&amp;w.png" />
+    <Content Include="screenshot.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

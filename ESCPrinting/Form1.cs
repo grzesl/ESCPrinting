@@ -211,5 +211,25 @@ namespace ESCPrinting
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonClearQrcode_Click(object sender, EventArgs e)
+        {
+            textBoxQRcode.Clear();
+        }
+
+        private void buttonClearBarcode_Click(object sender, EventArgs e)
+        {
+            textBoxBarcode.Clear();
+        }
+
+        private void buttonSendQRCode_Click(object sender, EventArgs e)
+        {
+            mPrinter.printQrCode(textBoxQRcode.Text);
+        }
+
+        private void buttonSendBarcode_Click(object sender, EventArgs e)
+        {
+            mPrinter.printBarCode(textBoxBarcode.Text);
+        }
     }
 }

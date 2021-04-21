@@ -259,5 +259,52 @@ namespace ESCPrinting
             sendPkt();
         }
 
+        public void printQrCode(String code)
+        {
+            int store_len = code.Length + 3;
+            byte store_pL = (byte)(store_len % 256);
+            byte store_pH = (byte)(store_len / 256);
+
+            mMemory.WriteByte((byte)29);//GS
+            mMemory.WriteByte((byte)40);// (
+            mMemory.WriteByte((byte)107);
+            mMemory.WriteByte(store_pL);
+            mMemory.WriteByte(store_pH);
+            mMemory.WriteByte((byte)49);
+            mMemory.WriteByte((byte)80);
+            mMemory.WriteByte((byte)48);
+
+            byte[] byteCode = mEncoding.GetBytes(code);
+
+            mMemory.Write(byteCode, 0, byteCode.Length);
+
+            mMemory.WriteByte((byte)29);//GS
+            mMemory.WriteByte((byte)40);// (
+            mMemory.WriteByte((byte)107);
+            mMemory.WriteByte((byte)3);
+            mMemory.WriteByte((byte)0);
+            mMemory.WriteByte((byte)49);
+            mMemory.WriteByte((byte)81);
+            mMemory.WriteByte((byte)48);
+
+            sendPkt();
+        }
+
+        public void printBarCode(String code)
+        {
+
+            if (code.Length > 255)
+                throw new Exception("Barcode to large");
+
+            byte[] byteCode = mEncoding.GetBytes(code);
+
+            mMemory.WriteByte((byte)29);//GS
+            mMemory.WriteByte((byte)107);// k
+            mMemory.WriteByte((byte)73); //BARCODE_CODE128 = 73;
+            mMemory.WriteByte((byte)byteCode.Length);
+            mMemory.Write(byteCode, 0, byteCode.Length);
+            sendPkt();
+        }
+
     }
 }
