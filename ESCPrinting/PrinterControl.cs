@@ -159,14 +159,14 @@ namespace ESCPrinting
 
             switch(name)
             {
-                case "CP852":
-                    mEncoding = Encoding.GetEncoding(852);
-                    charsetID = 18;
+                case "Windows 1250":
+                    mEncoding = Encoding.GetEncoding(1250);
+                    charsetID = 3;
                     break;
 
-                case "CP850":
-                    mEncoding = Encoding.GetEncoding(850);
-                    charsetID = 2;
+                case "Windows 1252":
+                    mEncoding = Encoding.GetEncoding(1252);
+                    charsetID = 5;
                     break;
 
 

@@ -275,25 +275,26 @@
             this.chUTF8B.TabIndex = 22;
             this.chUTF8B.Text = "UTF8";
             this.chUTF8B.UseVisualStyleBackColor = true;
+            this.chUTF8B.Visible = false;
             this.chUTF8B.Click += new System.EventHandler(this.chUTF8B_Click);
             // 
             // chCP852B
             // 
             this.chCP852B.Location = new System.Drawing.Point(126, 57);
             this.chCP852B.Name = "chCP852B";
-            this.chCP852B.Size = new System.Drawing.Size(73, 23);
+            this.chCP852B.Size = new System.Drawing.Size(106, 23);
             this.chCP852B.TabIndex = 23;
-            this.chCP852B.Text = "CP852";
+            this.chCP852B.Text = "Windows 1252";
             this.chCP852B.UseVisualStyleBackColor = true;
             this.chCP852B.Click += new System.EventHandler(this.chCP852B_Click);
             // 
             // chASCIIB
             // 
-            this.chASCIIB.Location = new System.Drawing.Point(284, 57);
+            this.chASCIIB.Location = new System.Drawing.Point(346, 57);
             this.chASCIIB.Name = "chASCIIB";
             this.chASCIIB.Size = new System.Drawing.Size(73, 23);
             this.chASCIIB.TabIndex = 24;
-            this.chASCIIB.Text = "US-ASCII";
+            this.chASCIIB.Text = "ASCII";
             this.chASCIIB.UseVisualStyleBackColor = true;
             this.chASCIIB.Click += new System.EventHandler(this.chASCIIB_Click);
             // 
@@ -318,11 +319,11 @@
             // 
             // chCP850B
             // 
-            this.chCP850B.Location = new System.Drawing.Point(205, 57);
+            this.chCP850B.Location = new System.Drawing.Point(238, 57);
             this.chCP850B.Name = "chCP850B";
-            this.chCP850B.Size = new System.Drawing.Size(73, 23);
+            this.chCP850B.Size = new System.Drawing.Size(102, 23);
             this.chCP850B.TabIndex = 26;
-            this.chCP850B.Text = "CP850";
+            this.chCP850B.Text = "Windows 1250";
             this.chCP850B.UseVisualStyleBackColor = true;
             this.chCP850B.Click += new System.EventHandler(this.chCP850B_Click);
             // 
@@ -539,7 +540,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "ESCPrinting Test v.1.06";
+            this.Text = "ESCPrinting Test v.1.07";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

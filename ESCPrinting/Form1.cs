@@ -101,12 +101,12 @@ namespace ESCPrinting
 
         private void chCP852B_Click(object sender, EventArgs e)
         {
-            mPrinter.sendCharset("CP852");
+            mPrinter.sendCharset(((Button) sender).Text);
         }
 
         private void chASCIIB_Click(object sender, EventArgs e)
         {
-            mPrinter.sendCharset("ASCII");
+            mPrinter.sendCharset(((Button)sender).Text);
         }
 
         private void disconnectB_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace ESCPrinting
 
         private void chCP850B_Click(object sender, EventArgs e)
         {
-            mPrinter.sendCharset("CP850");
+            mPrinter.sendCharset(((Button)sender).Text);
         }
 
         private void clearImgB_Click(object sender, EventArgs e)
@@ -180,10 +180,10 @@ namespace ESCPrinting
                 mPrinter.style(true, true, false, false, false);
                 mPrinter.printLine("BOLD");
                 mPrinter.lineFeed();
-                mPrinter.style(true, false, true, false, false);
+                mPrinter.style(true, false, false, true, false);
                 mPrinter.printLine("DOUBLE WIDTH");
                 mPrinter.lineFeed();
-                mPrinter.style(true, false, false, true, false);
+                mPrinter.style(true, false, true, false, false);
                 mPrinter.printLine("DOUBLE HEIGHT");
                 mPrinter.lineFeed();
                 mPrinter.style(true, false, false, false, true);
@@ -191,6 +191,7 @@ namespace ESCPrinting
                 mPrinter.lineFeed();
 
                 mPrinter.lineFeed();
+                mPrinter.style(true, false, false, false, false);
                 mPrinter.alignCenter();
 
 
@@ -202,6 +203,14 @@ namespace ESCPrinting
                 }
                 mPrinter.lineFeed();
 
+
+               // mPrinter.printLine("QRCode");
+               // mPrinter.lineFeed();
+                //mPrinter.printQrCode("QRCode");
+
+                //mPrinter.printBarCode("Barcode");
+                //mPrinter.printLine("Barcode");
+                //mPrinter.lineFeed();
 
                 mPrinter.style(false, false, false, false, false);
                 mPrinter.lineFeed();
