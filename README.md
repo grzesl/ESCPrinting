@@ -1,10 +1,6 @@
 # ESCPrinting
 
-ESCPrinting is a tool that allows you to print sample prints on a Virtual Thermal Printer or any POS Printer.
-The printer is available in the google play store at the link: [Google Play Virtual Thermal Printer](https://play.google.com/store/apps/details?id=pl.glpro.virtualthermalprinter "Google Play")
-More details are available on the website: [link](https://glpro.pl/virtual_thermal_printer "GLPRO")
-
-![](https://github.com/grzesl/ESCPrinting/raw/master/ESCPrinting/logo_b%26w.png)
+ESCPrinting is a tool that allows you to print sample prints on any POS Printer.
 
 # Supported commands 
 
