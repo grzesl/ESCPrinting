@@ -83,10 +83,12 @@ namespace ESCPrinting
             mPrinter.style(true, boldCB.Checked, doubleHeightCB.Checked, doubleWidthCB.Checked, underlineCB.Checked);
 
             for (int i = 0; i < textTB.Lines.Length; i++)
+            {
                 mPrinter.printLine(textTB.Lines[i]);
 
-            if(cbAppendLF.Checked)
-                mPrinter.lineFeed();
+                if (cbAppendLF.Checked)
+                    mPrinter.lineFeed();
+            }
         }
 
         private void clearB_Click(object sender, EventArgs e)
@@ -214,6 +216,7 @@ namespace ESCPrinting
 
                 mPrinter.style(false, false, false, false, false);
                 mPrinter.lineFeed();
+                mPrinter.alignLeft();
                 mPrinter.paperCut();
             }catch(Exception ex)
             {

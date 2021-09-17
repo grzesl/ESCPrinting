@@ -222,11 +222,13 @@
             // 
             // textTB
             // 
+            this.textTB.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textTB.Location = new System.Drawing.Point(90, 173);
             this.textTB.Multiline = true;
             this.textTB.Name = "textTB";
-            this.textTB.Size = new System.Drawing.Size(255, 140);
+            this.textTB.Size = new System.Drawing.Size(310, 140);
             this.textTB.TabIndex = 16;
+            this.textTB.Text = resources.GetString("textTB.Text");
             // 
             // sendB
             // 
@@ -410,7 +412,7 @@
             this.cbAppendLF.AutoSize = true;
             this.cbAppendLF.Checked = true;
             this.cbAppendLF.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAppendLF.Location = new System.Drawing.Point(361, 294);
+            this.cbAppendLF.Location = new System.Drawing.Point(406, 267);
             this.cbAppendLF.Name = "cbAppendLF";
             this.cbAppendLF.Size = new System.Drawing.Size(38, 17);
             this.cbAppendLF.TabIndex = 35;
